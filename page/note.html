@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tunis Doc</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main class="flex w-screen max-h-screen">
+        <div class=" w[30%]  min-h-screen  bg-gray-50">
+            <!-- Sidebar -->
+            <div class="flex h-screen flex-col overflow-hidden rounded-r-2xl bg-gray-700 text-white">
+              <h1 class="mt-10 ml-10 text-3xl font-bold">Tunis Doc</h1>
+              <ul class="mt-20 space-y-3">
+                <li id ="films" class="relative flex cursor-pointer space-x-2 rounded-md py-4 px-10 text-gray-300  hover:bg-slate-600">
+                  <span
+                    ><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg></span
+                  ><span class="">Ajouter Films</span>
+                </li>
+                <li id="projection" class="relative flex cursor-pointer space-x-2 rounded-md py-4 px-10 text-gray-300 hover:bg-slate-600">
+                  <span
+                    ><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" /></svg></span
+                  ><span class="">Projection</span>
+                  <svg class="absolute -top-1/2 -right-1 h-32 w-8 text-gray-50" xmlns="http://www.w3.org/2000/svg" viewBox="399.349 57.696 100.163 402.081" width="1em" height="4em">
+                    <path fill="currentColor" d="M 499.289 57.696 C 499.289 171.989 399.349 196.304 399.349 257.333 C 399.349 322.485 499.512 354.485 499.512 458.767 C 499.512 483.155 499.289 57.696 499.289 57.696 Z" />
+                  </svg>
+                </li>
+                <li id="real" class="relative flex cursor-pointer space-x-2 rounded-md py-4 px-10 text-gray-300 hover:bg-slate-600">
+                  <span
+                    ><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" /></svg></span
+                  ><span class="">Réalisateur</span>
+                </li>
+                <li id="prod" class="relative flex cursor-pointer space-x-2 rounded-md py-4 px-10 text-gray-300 hover:bg-slate-600">
+                  <span class="text-2xl"
+                    ><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36">
+                      <path fill="currentColor" d="M32 15h-1V9a1 1 0 0 0-1-1H6a1 1 0 0 1-1-.82v-.36A1 1 0 0 1 6 6h23.58a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3a3.08 3.08 0 0 0 0 .36v20.57A4.1 4.1 0 0 0 7.13 32H30a1 1 0 0 0 1-1v-6h1a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1Zm-3 15H7.13A2.11 2.11 0 0 1 5 27.93V9.88A3.11 3.11 0 0 0 6 10h23v5h-7a5 5 0 0 0 0 10h7Zm2-7h-9a3 3 0 0 1 0-6h9Z" class="clr-i-outline clr-i-outline-path-1" />
+                      <circle cx="23.01" cy="20" r="1.5" fill="currentColor" class="clr-i-outline clr-i-outline-path-2" />
+                      <path fill="none" d="M0 0h36v36H0z" /></svg></span
+                  ><span class="">Producteur</span>
+                </li>
+                <li id="note" class="relative flex cursor-pointer space-x-2 rounded-md py-4 px-10 font-semibold hover:bg-slate-600">
+                  <span
+                    ><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" /></svg></span
+                  ><span class="">Note</span>
+                </li>
+                <li class="relative flex cursor-pointer space-x-2 rounded-md py-4 px-10 text-gray-300 hover:bg-slate-600">
+                  <span
+                    ><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg></span
+                  ><span class="">Settings</span>
+                </li>
+              </ul>
+          
+              <div class="my-6 mt-auto ml-10 flex cursor-pointer">
+                <div>
+                  <img class="h-12 w-12 rounded-full" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" />
+                </div>
+                <div class="ml-3">
+                  <p class="font-medium">Palmer</p>
+                  <p class="text-sm text-gray-300">Tunisie</p>
+                </div>
+              </div>
+            </div>
+            <!-- /Sidebar -->
+        </div>
+        <section class="w-full overflow-x-hidden overflow-y-auto">
+            <div class="flex flex-col w-full md:flex-row    text-slate-800">
+                <div class="flex w-full mb-2 flex-col md:w-1/2 ">
+                  <div class="flex justify-center pt-12 md:justify-start md:pl-12">
+                    <a href="#" class="text-2xl font-bold text-blue-600"> Notes . </a>
+                  </div>
+                  <div class="my-auto mx-auto flex flex-col justify-center px-6 pt-8 md:justify-start lg:w-[28rem]">
+                    <p class="text-center text-3xl font-bold md:leading-tight md:text-left md:text-5xl">
+                      Ajouter <br />
+                      une <span class="text-blue-600">Note</span>
+                    </p>
+                    <p class="mt-6 text-center font-medium md:text-left">Noté un Films.</p>
+              
+                    <form id="noteForm" class="flex flex-col w-full items-stretch  pt-3 md:pt-8">
+                      <div class=" pt-4 w-full">
+                        <div class="relative flex overflow-hidden  rounded-md border-2 transition focus-within:border-blue-600">
+                          <input type="text" id="noteValue" class="w-full flex-shrink appearance-none border-gray-300 bg-white py-2 px-4 text-base text-gray-700 placeholder-gray-400 focus:outline-none" placeholder="Noté le films" />
+                        </div>
+                      </div>
+                     
+                      <div class=" pt-4 w-full">
+                        <label for="filmsOption" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Selectionné un films</label>
+                        <select id="filmsOption" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                          <option value="" selected>Selectionné le films à noté</option>
+                        </select>
+                      </div>
+                      <button id="btnNote" type="submit" class="mt-4 flex justify-center items-center rounded-lg bg-blue-600  py-2 text-center text-base font-semibold text-white shadow-md outline-none ring-blue-500 ring-offset-2 transition hover:bg-blue-700 focus:ring-2 md:w-full">
+                        <span id="textBtn" class="textBtn">Ajouter</span>
+                        <div role="status" class="load hidden">
+                            <svg aria-hidden="true" class="w-8 h-8 text-red-700 animate-spin dark:text-gray-600 fill-red-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+                                <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+                            </svg>
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                      </button>
+                    </form>
+                    
+                  </div>
+                </div>
+                <div class="relative h-screen sm:max-h-screen select-none bg-blue-600 bg-gradient-to-br md:block md:w-1/2">
+                    <h2 class="text-2xl text-center p-6 text-white">Liste des Films</h2>
+                    <div class="rounded-lg border border-gray-200">
+                        <div class="overflow-x-auto rounded-t-lg">
+                            <table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
+                                <thead class="ltr:text-left rtl:text-right">
+                                <tr>
+                                    <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">code</th>
+                                    <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Titre</th>
+                                    <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Date</th>
+                                    <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Note</th>
+                                </tr>
+                                </thead>
+                        
+                                <tbody id="contentNote" class="divide-y divide-gray-200">
+                                
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="rounded-b-lg border-t border-gray-200 px-4 py-2">
+                            <ol class="flex justify-end gap-1 text-xs font-medium">
+                                <li>
+                                <a
+                                    href="#"
+                                    class="inline-flex size-8 items-center justify-center rounded border border-gray-100 bg-white text-gray-900 rtl:rotate-180"
+                                >
+                                    <span class="sr-only">Prev Page</span>
+                                    <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="h-3 w-3"
+                                    viewBox="0 0 20 20"
+                                    fill="currentColor"
+                                    >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"
+                                    />
+                                    </svg>
+                                </a>
+                                </li>
+                        
+                                <li>
+                                <a
+                                    href="#"
+                                    class="block size-8 rounded border border-gray-100 bg-white text-center leading-8 text-gray-900"
+                                >
+                                    1
+                                </a>
+                                </li>
+                        
+                                <li class="block size-8 rounded border-blue-600 bg-blue-600 text-center leading-8 text-white">
+                                2
+                                </li>
+                        
+                                <li>
+                                <a
+                                    href="#"
+                                    class="block size-8 rounded border border-gray-100 bg-white text-center leading-8 text-gray-900"
+                                >
+                                    3
+                                </a>
+                                </li>
+                        
+                                <li>
+                                <a
+                                    href="#"
+                                    class="block size-8 rounded border border-gray-100 bg-white text-center leading-8 text-gray-900"
+                                >
+                                    4
+                                </a>
+                                </li>
+                        
+                                <li>
+                                <a
+                                    href="#"
+                                    class="inline-flex size-8 items-center justify-center rounded border border-gray-100 bg-white text-gray-900 rtl:rotate-180"
+                                >
+                                    <span class="sr-only">Next Page</span>
+                                    <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="h-3 w-3"
+                                    viewBox="0 0 20 20"
+                                    fill="currentColor"
+                                    >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                        clip-rule="evenodd"
+                                    />
+                                    </svg>
+                                </a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              
+        </section>
+    </main>
+    
+      
+      
+
+    <script src="../asset/js/verify.js"></script>
+    <script src="../asset/js/note.js"></script>
+</body>
+</html>

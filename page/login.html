@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tunis Doc</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="flex min-h-screen w-screen w-full items-center justify-center text-gray-600 bg-gray-50">
+        <div class="relative">
+          
+      <div class="hidden sm:block h-56 w-56 text-indigo-300 absolute a-z-10 -left-20 -top-20">
+         <svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(0.6) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='none'/><path d='M11 6a5 5 0 01-5 5 5 5 0 01-5-5 5 5 0 015-5 5 5 0 015 5'  stroke-width='1' stroke='none' fill='currentColor'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(#a)'/></svg>
+        </div>
+      <div class="hidden sm:block h-28 w-28 text-indigo-300 absolute a-z-10 -right-20 -bottom-20">
+         <svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='b' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(0.5) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='none'/><path d='M11 6a5 5 0 01-5 5 5 5 0 01-5-5 5 5 0 015-5 5 5 0 015 5'  stroke-width='1' stroke='none' fill='currentColor'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(#b)'/></svg>
+        </div>
+          <!-- Register -->
+          <div class="relative flex flex-col sm:w-[30rem] rounded-lg border-gray-400 bg-white shadow-lg px-4">
+            <div class="flex-auto p-6">
+              <!-- Logo -->
+              <div class="mb-10 flex flex-shrink-0 flex-grow-0 items-center justify-center overflow-hidden">
+                <a href="#" class="flex cursor-pointer items-center gap-2 text-indigo-500 no-underline hover:text-indigo-500">
+                  <span class="flex-shrink-0 text-3xl font-black lowercase tracking-tight opacity-100">Tunis Doc.</span>
+                </a>
+              </div>
+              <!-- /Logo -->
+              <h4 class="mb-2 font-medium text-gray-700 xl:text-xl">Bienvenue à Tunis Doc</h4>
+              <p class="mb-6 text-gray-500">Responsable Inspection et Responsable de production peuvent se connecter ici.</p>
+      
+              <form id="formLogin" class="mb-4" action="#" method="POST">
+                <div class="mb-4">
+                  <label for="email" class="mb-2 inline-block text-xs font-medium uppercase text-gray-700">Code identifiant</label>
+                  <input type="text" id="username" class="block w-full cursor-text appearance-none rounded-md border border-gray-400 bg--100 py-2 px-3 text-sm outline-none focus:border-indigo-500 focus:bg-white focus:text-gray-600 focus:shadow" id="email" name="email-username" placeholder="Entrer votre code d'identifiant" autofocus="" />
+                </div>
+                <div class="mb-4">
+                  <div class="flex justify-between">
+                    <label class="mb-2 inline-block text-xs font-medium uppercase text-gray-700" for="password">Mot de passe</label>
+                    <a href="auth-forgot-password-basic.html" class="cursor-pointer text-indigo-500 no-underline hover:text-indigo-500">
+                      <small class=" ">Mot de passe oublié?</small>
+                    </a>
+                  </div>
+                  <div class="relative flex w-full flex-wrap items-stretch">
+                    <input type="password" id="password" class="relative block flex-auto cursor-text appearance-none rounded-md border border-gray-400 bg--100 py-2 px-3 text-sm outline-none focus:border-indigo-500 focus:bg-white focus:text-gray-600 focus:shadow" name="password" placeholder="············" />
+                  </div>
+                </div>
+                <!-- <div class="mb-4">
+                  <div class="block">
+                    <input class="mt-1 mr-2 h-5 w-5 appearance-none rounded border border-gray-300 bg-contain bg-no-repeat align-top text-black shadow checked:bg-indigo-500 focus:border-indigo-500 focus:shadow" type="checkbox" id="remember-me" style="background-image: url(&quot;data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 10l3 3l6-6'/%3e%3c/svg%3e&quot;)" checked />
+                    <label class="inline-block" for="remember-me"> Remember Me </label>
+                  </div>
+                </div> -->
+                <div class="mb-4">
+                  <button type="submit" id="btnLogin" class="grid w-full cursor-pointer select-none rounded-md border border-indigo-500 bg-indigo-500 py-2 px-5 text-center align-middle text-sm text-white shadow hover:border-indigo-600 hover:bg-indigo-600 hover:text-white focus:border-indigo-600 focus:bg-indigo-600 focus:text-white focus:shadow-none">
+                    <span id="textBtn" class="textBtn">Se connecter</span>
+                    <div role="status" class="load hidden">
+                        <svg aria-hidden="true" class="w-8 h-8 text-red-700 animate-spin dark:text-gray-600 fill-red-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+                            <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+                        </svg>
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </button>
+                </div>
+              </form>
+      
+              <p class="mb-4 text-center">
+                ce connecter en tant que Admin?
+                <a href="#" class="cursor-pointer text-indigo-500 no-underline hover:text-indigo-500">connexion</a>
+              </p>
+            </div>
+          </div>
+          <!-- /Register -->
+        </div>
+      </div>
+      
+
+    <script src="../asset/js/login.js"></script>
+</body>
+</html>
